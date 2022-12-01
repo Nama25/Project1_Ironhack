@@ -54,7 +54,13 @@ const canvas = document.getElementById('canvas');
     stop(){
       if (this.points === 0) {
       clearInterval(this.interval);
-      ctx.fillText("OCEAN OVER", 350, 350)
+      ctx.fillText("OCEAN OVER", 280, 250)
+     
+    }
+
+    if (this.points === 30) {
+      clearInterval(this.interval);
+      ctx.fillText("OCEAN WINNER", 280, 250)
     }
 
     }
@@ -190,8 +196,8 @@ const canvas = document.getElementById('canvas');
       this.game = game;
       this.width = 100;
       this.height = 90;
-      this.x = 400;
-      this.y = 100;
+      this.x = 350;
+      this.y = 200;
       this.vy = 0;
       this.image = document.getElementById('surfer');
       this.speed = 0;
