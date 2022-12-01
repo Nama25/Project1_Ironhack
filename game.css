@@ -7,7 +7,7 @@
 #canvas {
     border: solid white 2px;
     position: absolute;
-    top: 52%;
+    top: 51%;
     left: 50%;
     transform: translate(-30%, -50%);
 }
@@ -31,7 +31,7 @@ h1 {
     width: 30%;
     margin-top: 20px;
     margin-left: 20px;
-    padding: 28px 40px;
+    padding: 26px 40px;
     background-color: white;
     opacity: 80%;
    
