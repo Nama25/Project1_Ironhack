@@ -22,14 +22,14 @@ h1 {
     margin-left: 210pt ;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: red;
-    font-size: 75px;
-    margin-top: 5px;
+    font-size: 65px;
+    margin-top: 10px;
 }
 
 #game-start {
     flex-flow: column;
     width: 30%;
-    margin-top: 25px;
+    margin-top: 20px;
     margin-left: 20px;
     padding: 28px 40px;
     background-color: white;
