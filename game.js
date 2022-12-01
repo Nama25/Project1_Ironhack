@@ -82,7 +82,7 @@ const canvas = document.getElementById('canvas');
         this.obstArray[i].x += 1;
         this.obstArray[i].update();
       };
-      if (this.frames % 150 === 0) {
+      if (this.frames % 200 === 0) {
         console.log(this.obstArray);
         
         this.x = 0;
@@ -100,7 +100,7 @@ const canvas = document.getElementById('canvas');
         this.obstArray[i].x += 1;
         this.obstArray[i].update();
       };
-      if (this.frames % 170 === 0) {
+      if (this.frames % 220 === 0) {
         console.log(this.obstArray);
         
         this.x = 0;
