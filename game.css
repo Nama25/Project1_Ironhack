@@ -29,9 +29,9 @@ h1 {
 #game-start {
     flex-flow: column;
     width: 30%;
-    margin-top: 20px;
+    margin-top: 40px;
     margin-left: 20px;
-    padding: 20px 40px;
+    padding: 28px 40px;
     background-color: white;
     opacity: 80%;
    
