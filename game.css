@@ -1,0 +1,86 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#canvas {
+    border: solid white 2px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+body {
+    background-image: url(./images/beach.png);
+    background-size: 100;
+}
+
+h1 {
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: red;
+    font-size: 75px;
+    margin-top: 5px;
+}
+
+#game-start {
+    flex-flow: column;
+    width: 30%;
+    padding: 10px 30px;
+    border-radius: 15px;
+    background-color: #dee5ef;
+    margin-bottom: 10px;
+  }
+
+p {
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+    text-align: center;
+
+}
+.surfer-start {
+    width: 10%;
+}
+
+.wave-start {
+    width: 5%;
+}
+
+.plastic-start {
+    width: 5%;
+}
+
+#surfer {
+    display: none;
+}
+
+#background {
+    display: none;
+}
+
+#surfer1 {
+    display: none;
+}
+
+#surfer2 {
+    display: none;
+}
+
+#wave {
+    display: none;
+}
+
+#plastic {
+    display: none;
+}
+
+#button-restart {
+    display: none;
+}
+
+#button-start {
+    display: block;
+}
+
