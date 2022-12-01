@@ -28,7 +28,7 @@ const canvas = document.getElementById('canvas');
     }
 
   start(){
-    this.interval = setInterval(animate, 200); 
+   this.interval = setInterval(animate, 400); 
   /*   const canvas = document.getElementById('canvas'); */
   /*   const ctx = canvas.getContext("2d");
     canvas.width = 700;
