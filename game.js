@@ -6,6 +6,8 @@ const canvas = document.getElementById('canvas');
  ctx.font = '20px Verdana';
   ctx.fillStyle = 'white'; 
 
+
+
  
   
 
@@ -27,8 +29,12 @@ const canvas = document.getElementById('canvas');
       
     }
 
-  start(){
-   this.interval = setInterval(animate, 400); 
+  start(){ 
+    this.obstArray = [];
+    this.points = 10;
+    this.interval = setInterval(animate, 10);
+
+ 
   /*   const canvas = document.getElementById('canvas'); */
   /*   const ctx = canvas.getContext("2d");
     canvas.width = 700;
@@ -75,6 +81,8 @@ const canvas = document.getElementById('canvas');
         
         this.x = 0;
         this.obstArray.push(new Obstical1(this))
+      } if (this.x >= this.width) {
+        this.obstArray.unshift(Obstical1(this))
       }
 
       this.obstArray.forEach(obst1 => {
@@ -91,6 +99,8 @@ const canvas = document.getElementById('canvas');
         
         this.x = 0;
         this.obstArray.push(new Obstical2(this))
+      }  if (this.x >= this.width) {
+        this.obstArray.unshift(Obstical2(this))
       }
 
       this.obstArray.forEach(obst2 => {
@@ -107,6 +117,8 @@ const canvas = document.getElementById('canvas');
         
         this.x = 0;
         this.obstArray.push(new Wave(this))
+      }  if (this.x >= this.width) {
+        this.obstArray.unshift(Wave(this))
       }
 
       this.obstArray.forEach(wave => {
@@ -123,6 +135,8 @@ const canvas = document.getElementById('canvas');
         
         this.x = 0;
         this.obstArray.push(new Plastic(this))
+      } if (this.x >= this.width) {
+        this.obstArray.unshift(Plastic(this))
       }
 
       this.obstArray.forEach(plastic => {
@@ -181,7 +195,7 @@ const canvas = document.getElementById('canvas');
       this.vy = 0;
       this.image = document.getElementById('surfer');
       this.speed = 0;
-      this.maxSpeed = 2;
+      this.maxSpeed = 1;
       
     }
 
@@ -301,7 +315,7 @@ class Obstical1 {
 
   }
   update(){
-    this.x += 0.4;
+    this.x += 0.1;
 
 }
   draw(context){
@@ -323,7 +337,7 @@ class Obstical2 {
 
   }
   update(){
-    this.x += 1;
+    this.x += 0.3;
   }
 
   draw(context){
@@ -344,7 +358,7 @@ class Wave {
   }
 
   update(){
-    this.x += 0.6;
+    this.x += 0.2;
   }
 
   draw(context){
@@ -365,7 +379,7 @@ class Plastic {
 
   }
   update(){
-    this.x += 0.2;
+    this.x += 0.1;
   }
 
   draw(context){
@@ -394,23 +408,28 @@ update(){
 
 
 
-  const game = new Game(canvas.width, canvas.height);
-  console.log(game);
+
 
   function animate(){
     /* ctx.clearRect(0, 0, canvas.width, canvas.height); */
-    game.start();
     game.clear()
     game.update();
     game.draw(ctx);
     game.stop();
+
+ 
 
    
     
    
 
   }
-animate() 
+
+  const game = new Game(canvas.width, canvas.height);
+  console.log(game);
+  document.getElementById('button-start').addEventListener('click', function() { game.start();})
+  document.getElementById('restart-button').addEventListener('click', function() { game.start();})
+
 
  }); 
 
